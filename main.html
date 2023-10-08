@@ -19,15 +19,29 @@
                 </p>
             </div>
             <div class="form-container">
-                <form class="form">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" name="first_name">
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" name="last_name">
+                <form action="https://httpbin.org/post" class="form" method="post">
+                    <div class="left">
+                        <label for="first_name">*FIRST NAME:</label>
+                        <input type="text" name="first_name" id="first_name" placeholder="John" required>
+                        <label for="email">*EMAIL:</label>
+                        <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" required>
+                        <label for="password">PASSWORD:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="right">
+                        <label for="last_name">LAST NAME:</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Doe">
+                        <label for="phone_number">PHONE NUMBER:</label>
+                        <input type="number" name="phone_number" id="phone_number" placeholder="+4749028323">
+                        <label for="conf_password">CONFIRM PASSWORD:</label>
+                        <input type="password" name="conf_password" id="password">
+                    </div>           
+
                 </form>
             </div>
             <div class="button-log-in">
-                <button type="button">Create account</button>
+                <button type="submit">Create account</button>
+                <button type="reset">Reset</button>
             </div>    
         </div>
     </div>
